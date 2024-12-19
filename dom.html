@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+//JavaScript - HTML DOM Methods
+<!--
+//The following example changes the content (the innerHTML) of the <p> element with id="demo":
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = "Hello World!";
+    //In the example above, getElementById is a method, while innerHTML is a property.
+    //The innerHTML property can be used to get or change any HTML element, including <html> and <body>.
+</script>
+-->
+//JavaScript HTML DOM Elements
+<!--
+<p id="intro">Finding HTML Elements by Id</p>
+<p>This example demonstrates the <b>getElementsById</b> method.</p>
+<p id="demo"></p>
+<script>
+    const element = document.getElementById("intro");
+
+    document.getElementById("demo").innerHTML =
+        "The text from the intro paragraph is: " + element.innerHTML;
+
+</script>
+-->
+<!--
+<p>Finding HTML Elements by Tag Name.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+<p id="demo"></p>
+<script>
+    const element = document.getElementsByTagName("p");
+
+    document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+</script>
+-->
+
+<!--
+<div id="main">
+    <p>Finding HTML Elements by Tag Name</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+<p id="demo"></p>
+<script>
+    const x = document.getElementById("main");
+    const y = x.getElementsByTagName("p");
+
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+</script>
+-->
+<!--
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+<p id="demo"></p>
+<script>
+    const x = document.getElementsByClassName("intro");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+-->
+<!--
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+<p id="demo"></p>
+<script>
+    const x = document.querySelectorAll("p.intro");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+-->
+
+<!--
+<p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+<form id="frm1" action="/action_page.php">
+    First name: <input type="text" name="fname" value="Donald"><br>
+    Last name: <input type="text" name="lname" value="Duck"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<p>These are the values of each element in the form:</p>
+<p id="demo"></p>
+<script>
+    const x = document.forms["frm1"];
+    let text = "";
+    for (let i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+//JavaScript HTML DOM - Changing HTML
+
+
+</body>
+</html>
